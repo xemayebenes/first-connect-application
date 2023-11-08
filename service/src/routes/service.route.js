@@ -6,7 +6,7 @@ import { logger } from '../utils/logger.utils.js';
 
 const serviceRouter = Router();
 
-const MIN_AMOUNT = process.env.MIN_AMOUNT;
+const MIN_AMOUNT = +process.env.MIN_AMOUNT;
 
 serviceRouter.post('/', async (req, res) => {
   logger.info('Order update extension executed');
