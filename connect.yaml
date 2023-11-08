@@ -10,8 +10,6 @@ deployAs:
         - key: CTP_REGION
           description: commercetools Composable Commerce API region
         - key: MIN_AMOUNT
-          required: true
-          default: 0
           description: MIN AMOUNT
       securedConfiguration:
         - key: CTP_PROJECT_KEY
