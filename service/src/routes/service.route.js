@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import { logger } from '../utils/logger.utils.js';
-import { testSharedLib } from 'shared';
+// import { testSharedLib } from 'shared';
 // const { testSharedLib } = shared
 
 // console.log('testSharedLib'), testSharedLib;
