@@ -15,8 +15,9 @@ const MIN_AMOUNT = +process.env.MIN_AMOUNT;
 serviceRouter.post('/', async (req, res) => {
   logger.info('Order update extension executed');
   logger.info(`Minumum required is ${MIN_AMOUNT} `);
-  const convertedMinAmount = testSharedLib(MIN_AMOUNT);
-  logger.info(`Converted Minumum required is ${convertedMinAmount} `);
+  let convertedMinAmount = MIN_AMOUNT;
+  // const convertedMinAmount = testSharedLib(MIN_AMOUNT);
+  // logger.info(`Converted Minumum required is ${convertedMinAmount} `);
 
   const cart = req.body.resource.obj;
 
