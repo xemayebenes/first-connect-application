@@ -1,16 +1,14 @@
 {
-  "name": "shared",
+  "name": "common-connect",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "license": "MIT",
   "type": "module",
-  "private": true,
   "scripts": {
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --write '**/*.{js,ts}'",
-    "test": "jest --config jest.config.cjs",
-    "test:watch": "jest --watch"
+    "test": " jest --config jest.config.cjs"
   },
   "devDependencies": {
     "eslint": "8.46.0",
@@ -22,7 +20,5 @@
     "jest-extended": "3.2.4",
     "prettier": "2.8.8"
   },
-  "dependencies": {
-    
-  }
+  "dependencies": {}
 }

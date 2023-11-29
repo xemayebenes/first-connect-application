@@ -3,10 +3,13 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import { logger } from '../utils/logger.utils.js';
-// import { testSharedLib } from 'shared';
-// const { testSharedLib } = shared
+import common from 'common-connect';
 
-// console.log('testSharedLib'), testSharedLib;
+
+const {
+  utils: { testSharedLib },
+} = common;
+
 
 const serviceRouter = Router();
 
@@ -15,9 +18,8 @@ const MIN_AMOUNT = +process.env.MIN_AMOUNT;
 serviceRouter.post('/', async (req, res) => {
   logger.info('Order update extension executed');
   logger.info(`Minumum required is ${MIN_AMOUNT} `);
-  let convertedMinAmount = MIN_AMOUNT;
-  // const convertedMinAmount = testSharedLib(MIN_AMOUNT);
-  // logger.info(`Converted Minumum required is ${convertedMinAmount} `);
+  const convertedMinAmount = testSharedLib(MIN_AMOUNT);
+  logger.info(`Converted Minumum required is ${convertedMinAmount} `);
 
   const cart = req.body.resource.obj;
 
